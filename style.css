@@ -1,0 +1,265 @@
+/* === GENERAL === */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	background: url('images/background.png') no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'Nunito', sans-serif;
+}
+
+#container,
+.header {
+	display: flex;
+	flex-direction: column;
+}
+
+#container {
+	max-height: 77%;
+	width: 70%;
+	margin: 1rem auto;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+/* === HEADER === */
+.header {
+	width: 100%;
+	text-align: center;
+	padding: 1rem 2rem;
+	background-color: lightseagreen;
+	color: white;
+}
+
+.header h1 {
+	margin-bottom: 1rem;
+	font-family: 'Bitter', serif;
+	font-size: 1.7rem;
+	letter-spacing: 3px;
+	word-spacing: 5px;
+}
+
+.header input,
+.header .add-btn {
+	border: none;
+	font-size: 0.8rem;
+	outline: none;
+}
+
+.header input {
+	border-radius: 0;
+	padding: 0.5rem;
+}
+
+.header .add-btn {
+	text-align: center;
+	padding: 0.5rem;
+	background-color: lightsteelblue;
+	color: darkblue;
+	cursor: pointer;
+}
+
+.header .add-btn:hover {
+	background-color: lightgreen;
+}
+
+/* === SORTING BTNS === */
+.sorting-btns {
+	background-color: bisque;
+	text-align: center;
+}
+
+.sort-btn {
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	padding: 0.1rem 0.5rem;
+	background-color: lightsteelblue;
+	color: darkblue;
+	cursor: pointer;
+	margin: 0.3rem;
+}
+
+.sort-btn:hover {
+	background-color: lightgreen;
+}
+
+.sort-btn:last-child {
+	margin-left: 2rem;
+}
+
+/* === LIST === */
+.list {
+	overflow: auto;
+}
+
+ul li {
+	cursor: pointer;
+	position: relative;
+	padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+	background: lightgray;
+	font-size: 1rem;
+	transition: 0.2s;
+	user-select: none;
+	word-wrap: break-word;
+}
+
+ul li:nth-child(even) {
+	background: whitesmoke;
+}
+
+ul li:hover {
+	background: darkgray;
+}
+
+ul li.checked {
+	background: lightslategrey;
+	color: whitesmoke;
+	text-decoration: line-through darkgreen;
+}
+
+ul li.checked::before {
+	content: '';
+	position: absolute;
+	top: 0.5rem;
+	left: 1.1rem;
+	transform: rotate(45deg);
+	height: 1rem;
+	width: 0.4rem;
+	border-color: darkgreen;
+	border-style: solid;
+	border-width: 0 3px 3px 0;
+}
+
+.delete {
+	color: darkred;
+	text-align: center;
+	width: 3rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.5rem 1rem;
+	font-size: 1rem;
+}
+
+.delete:hover {
+	background-color: lightcoral;
+	color: white;
+}
+
+.hidden {
+	display: none;
+}
+
+/* === MEDIA QUERIES === */
+@media (min-width: 768px) {
+	#container {
+		max-height: 74%;
+	}
+
+	.header {
+		display: inline;
+		padding: 1.5rem 4rem;
+	}
+
+	.header:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	.header h1 {
+		font-size: 2.5rem;
+	}
+
+	.header input,
+	.header .add-btn {
+		float: left;
+		font-size: 1rem;
+	}
+
+	.header input {
+		width: 75%;
+	}
+
+	.header .add-btn {
+		width: 25%;
+	}
+
+	.sort-btn {
+		font-weight: 500;
+		padding: 0.2rem 0.6rem;
+	}
+
+	.sort-btn:last-child {
+		margin-left: 3rem;
+	}
+
+	ul li {
+		padding: 0.7rem 0.5rem 0.7rem 2.7rem;
+		font-size: 1.3rem;
+	}
+
+	ul li.checked::before {
+		top: 0.7rem;
+		left: 1.1rem;
+		height: 1.3rem;
+		width: 0.5rem;
+		border-width: 0 4px 4px 0;
+	}
+
+	.delete {
+		width: 4rem;
+		padding: 0.7rem 1rem;
+		font-size: 1.3rem;
+	}
+}
+
+@media (min-width: 1024px) {
+	#container {
+		max-width: 67%;
+	}
+
+	.header h1 {
+		font-size: 3.7rem;
+	}
+
+	.header input,
+	.header .add-btn {
+		font-size: 1.3rem;
+	}
+
+	.sort-btn {
+		font-size: 0.8rem;
+		font-weight: 500;
+		letter-spacing: 1px;
+		padding: 0.3rem 0.7rem;
+	}
+
+	.sort-btn:last-child {
+		margin-left: 5rem;
+	}
+
+	ul li {
+		padding: 0.9rem 0.9rem 0.9rem 3.7rem;
+		font-size: 1.5rem;
+	}
+
+	ul li.checked::before {
+		left: 1.4rem;
+		height: 1.8rem;
+		width: 0.6rem;
+		border-width: 0 5px 5px 0;
+	}
+
+	.delete {
+		width: 5rem;
+		font-size: 1.8rem;
+	}
+}
