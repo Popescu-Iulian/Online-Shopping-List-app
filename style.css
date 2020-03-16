@@ -69,31 +69,6 @@ body {
 	background-color: lightgreen;
 }
 
-/* === SORTING BTNS === */
-.sorting-btns {
-	background-color: bisque;
-	text-align: center;
-}
-
-.sort-btn {
-	border: none;
-	border-radius: 5px;
-	outline: none;
-	padding: 0.1rem 0.5rem;
-	background-color: lightsteelblue;
-	color: darkblue;
-	cursor: pointer;
-	margin: 0.3rem;
-}
-
-.sort-btn:hover {
-	background-color: lightgreen;
-}
-
-.sort-btn:last-child {
-	margin-left: 2rem;
-}
-
 /* === LIST === */
 .list {
 	overflow: auto;
@@ -153,10 +128,6 @@ ul li.checked::before {
 	color: white;
 }
 
-.hidden {
-	display: none;
-}
-
 /* === MEDIA QUERIES === */
 @media (min-width: 768px) {
 	#container {
@@ -192,15 +163,6 @@ ul li.checked::before {
 		width: 25%;
 	}
 
-	.sort-btn {
-		font-weight: 500;
-		padding: 0.2rem 0.6rem;
-	}
-
-	.sort-btn:last-child {
-		margin-left: 3rem;
-	}
-
 	ul li {
 		padding: 0.7rem 0.5rem 0.7rem 2.7rem;
 		font-size: 1.3rem;
@@ -233,17 +195,6 @@ ul li.checked::before {
 	.header input,
 	.header .add-btn {
 		font-size: 1.3rem;
-	}
-
-	.sort-btn {
-		font-size: 0.8rem;
-		font-weight: 500;
-		letter-spacing: 1px;
-		padding: 0.3rem 0.7rem;
-	}
-
-	.sort-btn:last-child {
-		margin-left: 5rem;
 	}
 
 	ul li {
