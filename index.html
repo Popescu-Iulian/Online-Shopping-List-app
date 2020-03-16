@@ -3,9 +3,37 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Bitter|Nunito&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="style.css" />
-		<script src="script.js"></script>
+		<script defer src="script.js"></script>
 		<title>Real Time Shopping List App</title>
 	</head>
-	<body></body>
+	<body>
+		<div id="container">
+			<div class="header">
+				<h1>My Shopping List</h1>
+				<input
+					type="text"
+					class="items-input"
+					placeholder="What do you want to buy ..."
+					onkeypress="addItemByEnter(event)"
+				/>
+				<button onclick="addItem(event)" class="add-btn">
+					Add
+				</button>
+			</div>
+
+			<div class="sorting-btns hidden">
+				<button onclick="sortAsc()" class="sort-btn">Sort asc</button>
+				<button onclick="sortDesc()" class="sort-btn">Sort desc</button>
+			</div>
+
+			<div class="list">
+				<ul class="items-list"></ul>
+			</div>
+		</div>
+	</body>
 </html>
